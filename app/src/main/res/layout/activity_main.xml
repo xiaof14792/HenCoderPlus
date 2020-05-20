@@ -16,7 +16,8 @@
             android:id="@+id/materialEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="fangxiang"/>
+            android:hint="username"
+            android:textSize="28sp"/>
 
     </FrameLayout>
 
