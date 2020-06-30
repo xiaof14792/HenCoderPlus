@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="onClick"
+    tools:context=".ConstraintSetX">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/twitter"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/wechat"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/wechat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wechat"
+        app:layout_constraintStart_toEndOf="@id/twitter"
+        app:layout_constraintEnd_toStartOf="@id/wechat_friend"
+        app:layout_constraintTop_toTopOf="@id/twitter" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/wechat_friend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wechat_friend"
+        app:layout_constraintTop_toTopOf="@id/twitter"
+        app:layout_constraintStart_toEndOf="@id/wechat"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/weibo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/weibo"
+        app:layout_constraintTop_toBottomOf="@id/twitter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/qq"
+        android:layout_marginTop="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/qq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/qq"
+        app:layout_constraintTop_toTopOf="@id/weibo"
+        app:layout_constraintStart_toEndOf="@id/weibo"
+        app:layout_constraintEnd_toStartOf="@id/qzone"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/qzone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/qzone"
+        app:layout_constraintTop_toTopOf="@id/weibo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/qq"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
