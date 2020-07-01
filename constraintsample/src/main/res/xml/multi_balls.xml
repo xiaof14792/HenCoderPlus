@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/ball1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/ball2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/ball3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/ball4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/ball5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/ball1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ball2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/ball2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ball3"
+            app:layout_constraintStart_toEndOf="@id/ball1" />
+
+        <Constraint
+            android:id="@+id/ball3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ball4"
+            app:layout_constraintStart_toEndOf="@id/ball2" />
+
+        <Constraint
+            android:id="@+id/ball4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ball5"
+            app:layout_constraintStart_toEndOf="@id/ball3" />
+
+        <Constraint
+            android:id="@+id/ball5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ball4" />
+
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="2500">
+
+        <KeyFrameSet>
+            <!--            First ball-->
+            <KeyPosition
+                app:framePosition="18"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball1"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.68"
+                app:percentY="0.3" />
+
+            <KeyPosition
+                app:framePosition="36"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball1"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.9"
+                app:percentY="0.65" />
+
+            <KeyPosition
+                app:framePosition="46"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball1"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.5"
+                app:percentY="0.8" />
+
+            <KeyPosition
+                app:framePosition="65"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball1"
+                app:percentX="0.1"
+                app:percentY="0.6" />
+
+            <KeyPosition
+                app:framePosition="80"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball1"
+                app:percentX="0.5"
+                app:percentY="0.5" />
+
+            <KeyPosition
+                app:framePosition="90"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball1"
+                app:percentX="0.5"
+                app:percentY="0.8" />
+
+            <!--            Second ball-->
+            <KeyPosition
+                app:framePosition="20"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball2"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.68"
+                app:percentY="0.3" />
+
+            <KeyPosition
+                app:framePosition="38"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball2"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.9"
+                app:percentY="0.65" />
+
+            <KeyPosition
+                app:framePosition="48"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball2"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.5"
+                app:percentY="0.8" />
+
+            <KeyPosition
+                app:framePosition="67"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball2"
+                app:percentX="0.1"
+                app:percentY="0.6" />
+
+            <KeyPosition
+                app:framePosition="80"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball2"
+                app:percentX="0.5"
+                app:percentY="0.5" />
+
+            <KeyPosition
+                app:framePosition="90"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball2"
+                app:percentX="0.5"
+                app:percentY="0.8" />
+
+            <!--            Third ball-->
+            <KeyPosition
+                app:framePosition="22"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball3"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.68"
+                app:percentY="0.3" />
+
+            <KeyPosition
+                app:framePosition="40"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball3"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.9"
+                app:percentY="0.65" />
+
+            <KeyPosition
+                app:framePosition="50"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball3"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.5"
+                app:percentY="0.8" />
+
+            <KeyPosition
+                app:framePosition="69"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball3"
+                app:percentX="0.1"
+                app:percentY="0.6" />
+
+            <KeyPosition
+                app:framePosition="80"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball3"
+                app:percentX="0.5"
+                app:percentY="0.5" />
+
+            <KeyPosition
+                app:framePosition="90"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball3"
+                app:percentX="0.5"
+                app:percentY="0.8" />
+
+            <!--            Forth ball-->
+            <KeyPosition
+                app:framePosition="24"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball4"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.68"
+                app:percentY="0.3" />
+
+            <KeyPosition
+                app:framePosition="42"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball4"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.9"
+                app:percentY="0.65" />
+
+            <KeyPosition
+                app:framePosition="52"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball4"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.5"
+                app:percentY="0.8" />
+
+            <KeyPosition
+                app:framePosition="71"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball4"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.1"
+                app:percentY="0.6" />
+
+            <KeyPosition
+                app:framePosition="80"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball4"
+                app:percentX="0.5"
+                app:percentY="0.5" />
+
+            <KeyPosition
+                app:framePosition="90"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball4"
+                app:percentX="0.5"
+                app:percentY="0.8" />
+
+            <!--            Last ball-->
+            <KeyPosition
+                app:framePosition="26"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball5"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.68"
+                app:percentY="0.3" />
+
+            <KeyPosition
+                app:framePosition="44"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball5"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.9"
+                app:percentY="0.65" />
+
+            <KeyPosition
+                app:framePosition="54"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball5"
+                app:pathMotionArc="startVertical"
+                app:percentX="0.5"
+                app:percentY="0.8" />
+
+            <KeyPosition
+                app:framePosition="73"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball5"
+                app:percentX="0.1"
+                app:percentY="0.6" />
+
+            <KeyPosition
+                app:framePosition="80"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball5"
+                app:percentX="0.5"
+                app:percentY="0.5" />
+
+            <KeyPosition
+                app:framePosition="90"
+                app:keyPositionType="parentRelative"
+                app:motionTarget="@id/ball5"
+                app:percentX="0.5"
+                app:percentY="0.8" />
+
+        </KeyFrameSet>
+
+        <OnClick
+            app:clickAction="toggle"
+            app:targetId="@id/ball1" />
+    </Transition>
+
+</MotionScene>

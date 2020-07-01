@@ -1,3 +1,4 @@
+include ':constraintsample'
 include ':constraintlayout'
 include ':app', ':io'
 rootProject.name='HenCoderPlus'
